@@ -1,0 +1,103 @@
+[{
+  "_id": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "name": "My Võ",
+  "username": "doctor2",
+  "email": "doctor2@example.com",
+  "specialised": "Khoa Nhi",
+  "field": "Chuyên khoa cấp một chuyến ngành Tâm thần, cấp hai chuyên ngành nhi khoa",
+  "gender": "Nữ",
+  "password": "$2a$10$KyALdXgZXlfUYyllVaG1weUhzUn0td0Y.dlQsA97G56TN1RQ6l8ZS",
+  "status": "Active",
+  "blockedUsers": [
+    "629dae2fb7674c06a0497456"
+  ],
+  "img": "/images/icons/team-member-img2.jpg",
+  "slotConfig": {
+    "configSlotHours": "2",
+    "configSlotMinutes": "0",
+    "configSlotPreparation": "45",
+    "timeArr": [
+      {
+        "startTime": "13:00",
+        "endTime": "21:00"
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "626962976475da55b8bd994d"
+  },
+  "name": "Nhi Nguyễn",
+  "username": "doctor3",
+  "email": "doctor3@example.com",
+  "specialised": "Khoa ngoại chung",
+  "field": "Công tác tại Sở Y tế Lạng Sơn, chuyên viên chính sở Y tế Hà Nội",
+  "gender": "Nữ",
+  "password": "$2a$10$ywmaQfEiPSLs2G6uAZzp6O0NKelPMGjkZvUvXyjFZXIMYBfbX7OJa",
+  "status": "Active",
+  "blockedUsers": [],
+  "img": "/images/icons/team-member-img1.jpg",
+  "slotConfig": {
+    "configSlotHours": "7",
+    "configSlotMinutes": "30",
+    "configSlotPreparation": "2",
+    "timeArr": [
+      {
+        "startTime": "18:30",
+        "endTime": "23:00"
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "626962b56475da55b8bd994e"
+  },
+  "name": "Thành Phan",
+  "username": "doctor4",
+  "email": "doctor4@example.com",
+  "specialised": "Khoa giải phẫu",
+  "field": "Điều trị vô sinh đặc biệt / IVF, phẫu thuật nội soi và siêu âm chẩn đoán",
+  "gender": "Nam",
+  "password": "$2a$10$vWtAg8UMpomAlHMQjSGaq.sXIqf95XtdWD3I/inBLWvrSC4V9BXne",
+  "status": "Active",
+  "blockedUsers": [],
+  "img": "/images/icons/team-member-img3.jpg",
+  "slotConfig": {
+    "configSlotHours": "8",
+    "configSlotMinutes": "30",
+    "configSlotPreparation": "2",
+    "timeArr": [
+      {
+        "startTime": "07:00",
+        "endTime": "15:00"
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "name": "Nghĩa Trần",
+  "username": "doctor1",
+  "email": "doctor1@example.com",
+  "specialised": "Khoa tiêu hóa",
+  "field": "Giảng viên chính bộ môn nội tổng hợp, trường Đại học Y Hà Nội",
+  "gender": "Nam",
+  "password": "$2a$10$o3Q.7c27IMQ2tswfQT4s5.MlWc2pPseezrHaQDfAzqD2573JGgAtu",
+  "status": "Active",
+  "blockedUsers": [],
+  "slotConfig": {
+    "configSlotHours": "8",
+    "configSlotMinutes": "30",
+    "configSlotPreparation": "30",
+    "timeArr": [
+      {
+        "startTime": "08:00",
+        "endTime": "17:00"
+      }
+    ]
+  },
+  "img": "/images/icons/team-member-img4.jpg"
+}]

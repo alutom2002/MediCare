@@ -1,0 +1,112 @@
+<section class="admin-users ml-250">
+  <div class="user-container">
+    <div id="doctor-container" class="container active">
+      <div class="btn-sec">
+        <a href="/add-medicine">
+         <i class="fa-solid fa-plus"></i>
+        </a>
+      </div>
+      <div class="doctors-display">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Tên thuốc
+              </th>
+              <th>
+                Đơn vị tính
+              </th>
+              <th>
+                Giá bán
+              </th>
+              <th>
+                Số lượng trong kho
+              </th>
+              <th>
+                Ngày nhập
+              </th>
+              <th>
+                Ngày hết hạn
+              </th>
+              <th>
+                Chức năng
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each medicines}}
+            <tr id="{{this._id}}">
+              <td>
+                {{this.name}}
+              </td>
+              <td>
+                {{this.measurementUnit}}
+              </td>
+              <td>
+                {{this.price}}
+              </td>
+              <td>
+                {{this.amount}}
+              </td>
+              <td>
+                {{this.date-in}}
+              </td>
+              <td>
+                {{this.expiry}}
+              </td>
+              <td>
+                <div class="row">
+                  <div class="col-6">
+                    <a class="edit tooltip" href="/medicine/{{this._id}}">
+                      <i class="fa-solid fa-wrench"></i>
+                      <span class="tooltip-text">
+                        Cập nhập
+                      </span>
+                    </a>
+                  </div>
+                  <div class="col-6">
+                    <span class="delete tooltip" onclick="modalup('medicine-modal','{{this._id}}')">
+                      <i class="fa-solid fa-xmark"></i>
+                      <span class="tooltip-text">
+                        Xóa
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="modal-container">
+  <div class="modal medicine-modal">
+    <h1>Bạn có muốn xóa thuốc khỏi kho ?</h1>
+    <button class="yes" id="medicine-delete">
+      Có
+    </button>
+    <button class="no" onclick="document.querySelector('.medicine-modal').classList.toggle('active')">
+      Không
+    </button>
+  </div>
+  <div class="modal delete-sucess-modal">
+    <h1>
+      Xóa thành công
+    </h1>
+    <button class="normal" onclick="document.querySelector('.delete-sucess-modal').classList.toggle('active')">
+      Đóng
+    </button>
+  </div>
+  <div class="modal delete-fail-modal">
+    <h1>
+      Có lỗi xảy ra
+    </h1>
+    <button class="normal" onclick="document.querySelector('.delete-fail-modal').classList.toggle('active')">
+      Đóng
+    </button>
+  </div>
+</div>
+<script src="/javascripts/users-search.js"></script>

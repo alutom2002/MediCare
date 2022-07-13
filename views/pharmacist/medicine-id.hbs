@@ -1,0 +1,43 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Cập nhập thuốc
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    <form action="/medicine/{{medicine._id}}" 
+      method="POST" 
+      onsubmit="return validate(event)">
+      <div class="input-section">
+        <input type="text" name="name" value="{{medicine.name}}" required />
+        <label for="">
+          Tên thuốc
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="price" value="{{medicine.price}}" required />
+        <label for="">
+          Giá
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="amount" value="{{medicine.amount}}" required />
+        <label for="">
+          Số lượng
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="measurementUnit" value="{{medicine.measurementUnit}}" required />
+        <label for="">
+          Đơn vị đo
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="submit" value="Cập nhập" />
+      </div>
+    </form>
+  </div>
+</section>

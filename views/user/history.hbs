@@ -1,0 +1,47 @@
+<section class="user history">
+    <div class="head">
+        <h2>Hồ sơ khám bệnh</h2>
+        <h3>BS. {{reqDoctor.name}}</h3>
+    </div>
+    {{#if history}}
+    <div class="doctors-display" style="padding: 25px;">
+        <table>
+            <thead>
+                <tr>
+                    </th>
+                    <th>
+                        Tư vấn
+                    </th>
+                    <th>
+                        Thuốc
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each history}}
+                <tr id="{{this._id}}">
+                    <td>
+                        <span>{{this.date}}</span>
+                        <span>{{this.timeslot}}</span>
+                    </td>
+                    <td>
+                        {{#each this.medicines}}
+                        {{this}}
+                        {{/each}}
+                    </td>
+                    <td>{{this.notes}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    </div>
+    {{else}}
+    <div class="head" style="display: flex; justify-content: center">
+        <h1>Không có hồ sơ tìm thấy</h1>
+    </div>
+    {{/if}}
+</section>

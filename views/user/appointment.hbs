@@ -1,0 +1,253 @@
+<section class="user appointment">
+  <div class="user-container">
+    <div class="tab">
+      <button id="requsted" class="active"
+        onclick="toogleTab3('#requsted','#consulted','#appointment', '#cancel', '#requested-container','#consulted-container', '#appointment-container', '#cancelled-container')">
+        <i class="fas fa-spinner"></i>
+        Đang chờ
+      </button>
+      <button id="appointment"
+        onclick="toogleTab3('#appointment', '#requsted' ,'#consulted','#cancel', '#appointment-container', '#consulted-container', '#cancelled-container','#requested-container')">
+        <i class="fas fa-calendar-check"></i>
+        Lịch hẹn
+      </button>
+      <button id="consulted"
+        onclick="toogleTab3('#consulted','#appointment', '#requsted' ,'#cancel', '#consulted-container', '#requested-container','#appointment-container', '#cancelled-container')">
+        <i class="fas fa-clipboard-check"></i>
+        Hoàn thành
+      </button>
+      <button id="cancel"
+        onclick="toogleTab3('#cancel','#consulted','#appointment', '#requsted', '#cancelled-container','#requested-container','#consulted-container', '#appointment-container')">
+        <i class="fas fa-calendar-times"></i>
+        Bị Hủy
+      </button>
+    </div>
+  </div>
+  <div class="search-appointment search-appmnt">
+    <form action="/search" method="GET">
+      <div class="btn-grp">
+        <input type="search" name="q" class="first" id="search" value="{{query}}" placeholder="Search....">
+        <button type="submit" class="last" id="search-btn"><i class="fas fa-search"></i></button>
+      </div>
+    </form>
+    <div id="date-c">
+      <input type="date" id="date" style="margin: 0" value="{{date}}">
+    </div>
+  </div>
+  <div class="card" id="appointment-container">
+    {{#if appointments}}
+    {{#each appointments}}
+    <div class="container" id="{{this._id}}">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h3>
+            {{this.doctor.name}}
+          </h3>
+          <p>
+            {{this.doctor.field}}
+          </p>
+        </div>
+      </div>
+      <div class="content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+        <p>
+          {{this.status}}
+        </p>
+        <div class="btn-grp" style="margin-left: 0; font-size: 16px">
+          <a href="#">
+            <button class="crop" style="font-size: 15px" onclick="modalup('message-modal','{{this._id}}')">
+              hủy lịch hẹn
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="container">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <div class="user-container">
+    <div class="card active" id="requested-container">
+      {{#if requests}}
+      {{#each requests}}
+      <div class="container" id="{{this._id}}">
+        <div class="doctor-section">
+          <div>
+            <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+          </div>
+          <div>
+            <h3>
+              {{this.doctor.name}}
+            </h3>
+            <p>
+              {{this.doctor.field}}
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            {{this.date}}
+          </p>
+          <p>
+            {{this.timeslot}}
+          </p>
+          <p>
+            {{this.status}}
+          </p>
+          <div class="btn-grp" style="margin-left: 0; font-size: 16px">
+            <button class="crop" style="font-size: 15px" onclick="modalup('message-modal','{{this._id}}')">
+              Hủy lịch hẹn
+            </button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+      {{else}}
+      <div class="container">
+        <h1>
+          Không có lịch hẹn
+        </h1>
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  <div class="user-container">
+    <div class="card" id="consulted-container">
+      {{#if consulted}}
+      {{#each consulted}}
+      <div class="container" id="{{this._id}}">
+        <div class="doctor-section">
+          <div>
+            <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+          </div>
+          <div>
+            <h3>
+              {{this.doctor.name}}
+            </h3>
+            <p>
+              {{this.doctor.field}}
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            {{this.date}}
+          </p>
+          <p>
+            {{this.timeslot}}
+          </p>
+          <h3>Thuốc</h3>
+          {{#if this.medicines}}
+          {{#each this.medicines}}
+          <p>{{this}}</p>
+          {{/each}}
+          {{else}}
+          <p>Không có thuốc được cung cấp</p>
+          {{/if}}
+          {{#if this.notes}}
+          <h3>Ghi chú</h3>
+          {{this.notes}}
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{else}}
+    <div class="container">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  </div>
+  <div class="user-container">
+    <div class="card" id="cancelled-container">
+      {{#if cancelled}}
+      {{#each cancelled}}
+      <div class="container" id="{{this._id}}">
+        <div class="doctor-section">
+          <div>
+            <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+          </div>
+          <div>
+            <h3>
+              {{this.doctor.name}}
+            </h3>
+            <p>
+              {{this.doctor.field}}
+            </p>
+          </div>
+        </div>
+        <div class="content">
+          <p>
+            {{this.date}}
+          </p>
+          <p>
+            {{this.timeslot}}
+          </p>
+          <p>
+            {{this.status}}
+          </p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    {{else}}
+    <div class="container">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+</section>
+<div class="modal message-modal">
+  <h1>
+    Bạn có muốn hủy lịch hẹn ?
+  </h1>
+  <button class="yes" onclick="cancelAppointment()">
+    Có
+  </button>
+  <button class="no" onclick="document.querySelector('.message-modal').classList.toggle('active')">
+    Không
+  </button>
+</div>
+<div class="modal success-modal">
+  <h1>
+    Lịch hẹn được hủy thành công
+  </h1>
+  <button class="normal" onclick="document.querySelector('.success-modal').classList.toggle('active')">
+    Đóng
+  </button>
+</div>
+<div class="modal error-modal">
+  <h1>
+    Có lỗi xảy ra
+  </h1>
+  <button class="normal" onclick="document.querySelector('.error-modal').classList.toggle('active')">
+    Đóng
+  </button>
+</div>
+<script>
+  var date = document.getElementById("date");
+  date.addEventListener("change", (event) => {
+    let date = new Date(event.target.value).toDateString();
+    location.search = `date=${date}`;
+  });
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/javascripts/booking.js"></script>

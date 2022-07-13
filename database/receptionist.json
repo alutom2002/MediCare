@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "name": "Anh Thi",
+  "username": "letan1",
+  "email": "anhthi@example.com",
+  "gender": "Female",
+  "password": "$2b$10$1OkU2d8TDs4zcnx6fD3DFOz1Sr5JtKfAbgWlWmsfHKNUFifQoSrs2",
+  "status": "Active",
+  "slotConfig": {
+    "configSlotHours": "8",
+    "configSlotMinutes": "30",
+    "configSlotPreparation": null,
+    "timeArr": [
+      {
+        "startTime": "07:30",
+        "endTime": "23:30"
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "629c69eb92a06f3ea89cb6cd"
+  },
+  "name": "Linh Đan",
+  "username": "letan2",
+  "email": "linhdan@example.com",
+  "gender": "Female",
+  "password": "$2b$10$P7sduS6ZGizyCZqmdLm1wuHafXMmx.Lu6ADXQki6NWE7b7JfxFAK2",
+  "status": "Active"
+}]

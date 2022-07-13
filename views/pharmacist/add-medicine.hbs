@@ -1,0 +1,59 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Thêm thuốc
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    <form action="/add-medicine" method="POST" onsubmit="return validate(event)">
+      <div class="input-section">
+        <input type="text" name="name" required value="{{medicine.name}}" />
+        <label for="">
+          Tên thuốc
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="price" required value="{{medicine.price}}" />
+        <label for="">
+          Giá
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="date" name="date-in" placeholder="" required value="{{medicine.date-in}}" />
+        <label for="">
+          Ngày nhập
+        </label>
+      </div>
+<div class="input-section">
+        <input type="date" name="expiry" required value="{{medicine.expiry}}" />
+        <label for="">
+          Ngày hết hạn
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="measurementUnit" required value="{{medicine.measurementUnit}}" />
+        <label for="">
+          Đơn vị
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" name="producing-countrty" required value="{{medicine.producing-countrty}}" />
+        <label for="">
+          Nước sản xuất
+        </label>
+      </div>
+        <div class="input-section">
+        <input type="number" name="amount" required value="{{medicine.amount}}" />
+        <label for="">
+          Số lượng
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="submit" value="Thêm" />
+      </div>
+    </form>
+  </div>
+</section>

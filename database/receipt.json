@@ -1,0 +1,199 @@
+[{
+  "_id": {
+    "$oid": "62a201ea1518804d70aa57f1"
+  },
+  "appointmentId": {
+    "$oid": "62a201ea1518804d70aa57f0"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a2056041772f5264b2cd09"
+  },
+  "appointmentId": {
+    "$oid": "62a2056041772f5264b2cd08"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a20621ed2c3d59e8f8eeb4"
+  },
+  "appointmentId": {
+    "$oid": "62a20621ed2c3d59e8f8eeb3"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a2065566701b59342efd5c"
+  },
+  "appointmentId": {
+    "$oid": "62a2065566701b59342efd5b"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a206eb58251156f03f91c0"
+  },
+  "appointmentId": {
+    "$oid": "62a206eb58251156f03f91bf"
+  },
+  "receptionist": {
+    "$oid": "629c69eb92a06f3ea89cb6cd"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a208e97e44384ad050e7d9"
+  },
+  "appointment": {
+    "$oid": "62a208e97e44384ad050e7d8"
+  },
+  "receptionist": {
+    "$oid": "629c69eb92a06f3ea89cb6cd"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Omeprazole,Amoxicillin,Ciprofloxacin,Prednisone",
+  "notes": "Ngày uống 5 viên",
+  "total": "40000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a209008fe17822e039ffa5"
+  },
+  "appointment": {
+    "$oid": "628d850acb7ad87940d81264"
+  },
+  "receptionist": {
+    "$oid": "629c69eb92a06f3ea89cb6cd"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "628d8419cb7ad87940d81263"
+  },
+  "date": "Wed May 25 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "medicines": "Ibuprofen,Gabapentin",
+  "notes": "Uong ngay 3 lan ",
+  "total": "20000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a80ad8c2867a5268b28d7e"
+  },
+  "appointment": {
+    "$oid": "62a760e6695d2b5eec21ff9c"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a760a5695d2b5eec21ff9b"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "medicines": "Phennameine Hydrochloride,Nicotine,Mirtazapine,Olanzapine",
+  "notes": "Phennameine Hydrochloride ngày uống 2 viên, Uống 1 tuầnNicotine ngày uống 1 lân, uống 3 ngàymirtazapine ngày uống 2 lần, uống 1 tuầnolanzapine ngày uống 2 lần, uống 1 tuần",
+  "total": "6000000",
+  "status": "Exported"
+},{
+  "_id": {
+    "$oid": "62a82774a5ed69430c6e2fec"
+  },
+  "appointment": {
+    "$oid": "62a7ef99caddf850b8239551"
+  },
+  "receptionist": {
+    "$oid": "629a3a2ad63ac101f85c6c3e"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "medicines": "Metronidazole\t,ATORVASTATIN CALCIUM,Stool Softener Laxative\t",
+  "notes": "Metronidazole ngày uống 3 viên, Uống 3 ngàyATORVASTATIN ngày uống 2 viên, uống 1 tuầnLaxative ngày uống 2 viên, uống 5 ngày",
+  "total": "30877644",
+  "status": "Exported"
+}]

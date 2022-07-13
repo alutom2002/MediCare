@@ -1,0 +1,56 @@
+<section class="user doctors">
+    <div class="head">
+       <h1>Bác sĩ của tôi</h1>
+    </div>
+    <div class="user-container">
+        <div id="doctor-container" class="container active">
+            <div class="doctors-display" style="padding: 10px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Tên
+                            </th>
+                            <th>
+                                Chuyên ngành
+                            </th>
+                            <th>
+                                Nghiên cứu chuyên sâu
+                            </th>
+                            <th>
+                                Lịch hẹn gần nhất
+                            </th>
+                            <th>
+                                Chức năng
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each doctors}}
+                        <tr id="{{this._id}}">
+                            <td>
+                                {{this.name}}
+                            </td>
+                            <td>
+                                {{this.specialised}}
+                            </td>
+                            <td>
+                                {{this.field}}
+                            </td>
+                            <td>
+                                {{this.last.date}} <br> {{this.last.timeslot}}
+                            </td>
+                            <td>
+                                <a class="edit tooltip" href="/history/{{this._id}}">
+                                    <i class="fas fa-calendar"></i>
+                                    <span class="tooltip-text">Lịch sử</span>
+                                </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

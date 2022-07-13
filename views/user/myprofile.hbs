@@ -1,0 +1,83 @@
+<section class="user myprofile">
+    <div class="head">
+        <h1>Cá nhân</h1>
+    </div>
+    <div class="container">
+        <div class="profile-disp">
+            <div class="disp-head">
+                <div class="img-sec">
+                    {{#isImage user._id "users"}}
+                    <img class="img" src="/images/users/{{user._id}}.jpg" alt="{{userDetails.name}}">
+                    {{else}}
+                    {{#isNotOAuth user.auth}}
+                    <img class="img" src="/images/icons/undraw_male_avatar_323b.svg">
+                    {{else}}
+                    <img class="img" src="{{user.profileImage}}" alt="">
+                    {{/isNotOAuth}}
+                    {{/isImage}}
+                </div>
+            </div>
+            <div class="disp-body">
+                <p>Tên: <span>{{userDetails.name}}</span></p>
+                {{#if userDetails.email}}
+                <p>Email: <span>{{userDetails.email}}</span></p>
+                {{/if}}
+                {{#if userDetails.contactno}}
+                <p>Số điện thoại: <span>{{userDetails.contactno}}</span></p>
+                {{/if}}
+                {{#if userDetails.gender}}
+                <p>Giới tính: <span>{{userDetails.gender}}</span></p>
+                {{/if}}
+                {{#if userDetails.age}}
+                <p>Tuổi: <span>{{userDetails.age}}</span></p>
+                {{/if}}
+                <div class="btn-grp" style="margin-left: 0;">
+                    <a href="/profile/edit"><button class="crop">Cập nhập</button></a>
+                    {{#isOAuth userDetails.auth userDetails.email}}
+                    <a href="/profile/change-password" style="margin-left: 30px;">
+                        <button class="crop">Đổi mật khẩu</button>
+                    </a>
+                    {{/isOAuth}}
+                </div>
+            </div>
+        </div>
+        <div class="insights-section">
+            <div class="head" style="padding-top: 0;">
+                <h1>Tổng quan</h1>
+            </div>
+            <div class="in-body">
+                {{#if insights.lastBook}}
+                <div>
+                    <h4>Lịch hẹn gần nhất</h4>
+                    <p>{{insights.lastBook.date}}</p>
+                    <p>{{insights.lastBook.timeslot}}</p>
+                    <p>Trạng thái: {{insights.lastBook.status}}</p>
+                    <p>Với {{insights.lastBook.doctor.name}}</p>
+                    {{#if insights.lastApp}}
+                    <h4>Tổng số lịch hẹn</h4>
+                    <p>{{insights.consultedAppCount}}</p>
+                    {{/if}}
+                </div>
+                {{else}}
+                <div>
+                    <p>Chưa có lịch hẹn nào</p>
+                </div>
+                {{/if}}
+                <div>
+                    <h4>Lịch hẹn gần nhất</h4>
+                    {{#if insights.lastApp}}
+                    <p>{{insights.lastApp.date}}</p>
+                    <p>{{insights.lastApp.timeslot}}</p>
+                    <p>Với {{insights.lastApp.doctor.name}}</p>
+                    <h4>Bác sĩ được nhiều người tiến cử</h4>
+                    <p>{{insights.mostVisited.name}}</p>
+                    {{else}}
+                    <div>
+                        <p>Chưa có lịch hẹn nào</p>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

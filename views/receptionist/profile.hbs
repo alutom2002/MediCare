@@ -1,0 +1,55 @@
+<div class="user profile">
+    <div class="container">
+        <div class="card">
+            <div class="card-head">
+                <h1>
+                    Hồ sơ của tôi
+                </h1>
+            </div>
+            <div class="card-body">
+                <div class="img-sec">
+                    {{#isImage receptionistDetails._id "doctor"}}
+                    <img src="{{receptionistDetails.img}}" alt="">
+                    {{else}}
+                    <img src="/images/icons/undraw_male_avatar_323b.svg">
+                    {{/isImage}}
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Tên:
+                        {{receptionistDetails.name}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Tên đăng nhập:
+                        {{receptionistDetails.username}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Email:
+                        {{receptionistDetails.email}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Giới tính: {{receptionistDetails.gender}}
+                    </p>
+                </div>
+                <div class="details-field">
+                    <p>
+                        Thời gian làm việc:
+                        {{#each receptionistDetails.slotConfig.timeArr}}
+                        {{this.startTime}} tới {{this.endTime}}
+                        {{/each}}
+                    </p>
+                </div>
+                <div class="btn-grp">
+                    <a href="/profile/edit"><button class="crop">Sửa đổi chi tiết</button></a>
+                    <a href="/profile/slot-config"><button class="crop" style="margin-left: 10px;">Sửa ca thời gian</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

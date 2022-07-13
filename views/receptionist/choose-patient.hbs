@@ -1,0 +1,55 @@
+<section class="dr-page ptnt ml-250">
+
+  <div class="user-container">
+    <div id="doctor-container" class="container active">
+      <div class="doctors-display" style="padding: 25px;">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Tên bệnh nhân
+              </th>
+              <th>
+                Tên bác sĩ khám
+              </th>
+              <th>
+                Ngày khám
+              </th>
+              <th>
+                Giờ khám
+              </th>
+              <th>
+                Chức năng
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each appointments}}
+            <tr id="{{this._id}}">
+              <td>
+                {{this.user.name}}
+              </td>
+              <td>
+                {{this.doctor.name}}
+              </td>
+              <td>
+                {{this.date}}
+              </td>
+              <td>
+                {{this.timeslot}}
+              </td>
+              <td>
+                <a class="edit tooltip" href="/add-receipt/{{this._id}}">
+                  <i class="fa-solid fa-plus"></i>
+                  <span class="tooltip-text">Xuất hóa đơn</span>
+                </a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/javascripts/patient-search.js"></script>

@@ -1,0 +1,57 @@
+<section class="dr-page history ml-250">
+    {{#if history}}
+    <div class="doctors-display" style="padding: 25px;">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Tên bệnh nhân
+                    </th>
+                    <th>
+                        Email bệnh nhân
+                    </th>
+                    {{!-- <th>
+                        Số điện thoại bệnh nhân
+                    </th> --}}
+                    <th>
+                        Tư vấn vào
+                    </th>
+                    <th>
+                        Thuốc
+                    </th>
+                    <th>
+                        Ghi chú
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each history}}
+                <tr id="{{this._id}}">
+                    <td>
+                        {{this.user.name}}
+                    </td>
+                    <td>
+                        {{this.user.email}}
+                    </td>
+                    {{!-- <td>
+                        {{this.user.contactno}}
+                    </td> --}}
+                    <td><span>{{this.date}}</span></td>
+                    <td>
+                        {{#each this.medicines}}
+                        {{this}}
+                        {{/each}}
+                    </td>
+                    <td>{{this.notes}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+    </div>
+    {{else}}
+    <div class="head" style="display: flex; justify-content: center">
+        <h1>Không tìm thấy hồ sơ</h1>
+    </div>
+    {{/if}}
+</section>

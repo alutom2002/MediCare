@@ -1,0 +1,159 @@
+<header class="header fixed-top">
+
+  <nav class="navbar navbar-expland-lg">
+
+    <div class="container">
+
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand logo">Medi<span>Care</span></a>
+      </div>
+
+      {{!-- <div>
+        <a href="/">
+          Home
+        </a>
+        {{#if user}}
+        <a href="/appointments">
+          Appointments
+        </a>
+        <a href="/mydoctors">
+          My Doctors
+        </a>
+        <a href="/profile">
+          My Profile
+        </a>
+        {{else}}
+        <a href="/login">
+          Login
+          <a href="#contact">
+            Contact
+          </a>
+        </a>
+        {{/if}}
+        {{#if user}}
+        <a href="/logout">
+          Logout
+        </a>
+        <div>
+          <a href="/myprofile">
+            {{#isImage user._id "users"}}
+            <img class="img" src="/images/users/{{user._id}}.jpg" alt="{{userDetails.name}}">
+            {{else}}
+            {{#isNotOAuth user.auth}}
+            <img class="img" src="/images/icons/undraw_male_avatar_323b.svg">
+            {{else}}
+            <img class="img" src="{{user.profileImage}}" alt="">
+            {{/isNotOAuth}}
+            {{/isImage}}
+        </div>
+        </a>
+        {{/if}}
+      </div> --}}
+
+      <div class="navbar navbar-right" id="mainNavbar">
+        <ul class="nav">
+          {{#if user}}
+          <li class="nav-item">
+            <a class="nav-link" href="/#home">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/appointments">lịch khám</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mydoctors">Bác sĩ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">đăng xuất</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/myprofile">
+              {{#isImage user._id "users"}}
+              <img class="avatar" src="/images/users/{{user._id}}.jpg" alt="{{userDetails.name}}">
+              {{else}}
+              {{#isNotOAuth user.auth}}
+              <img class="avatar" src="/images/icons/undraw_male_avatar_323b.svg">
+              {{else}}
+              <img class="avatar" src="{{user.profileImage}}" alt="">
+              {{/isNotOAuth}}
+              {{/isImage}}
+            </a>
+          </li>
+          {{else}}  
+          <li class="nav-item">
+            <a class="nav-link" href="/#home">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#about">Giới thiệu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#contact">liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#rate">đánh giá</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#blog">tin tức</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">đăng nhập</a>
+          </li>
+          {{/if}}
+        </ul>
+      </div>
+
+      {{!-- <div class="menu-icon">
+        {{#if user}}
+        <div style="padding-top: 10px;">
+          <a href="/myprofile">
+            {{#isImage user._id "users"}}
+            <img class="img" src="/images/users/{{user._id}}.jpg" alt="{{userDetails.name}}">
+            {{else}}
+            {{#isNotOAuth user.auth}}
+            <img class="img" src="/images/icons/undraw_male_avatar_323b.svg">
+            {{else}}
+            <img class="img" src="{{user.profileImage}}" alt="">
+            {{/isNotOAuth}}
+            {{/isImage}}
+          </a>
+        </div>
+        {{/if}}
+        <div onclick="document.querySelector('.menu-user').classList.toggle('active');">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div> --}}
+
+    </div>
+
+  </nav>
+
+</header>
+
+{{!-- <div class="menu-user">
+  <span onclick="document.querySelector('.menu-user').classList.toggle('active');">
+    ×
+  </span>
+  <a href="/">
+    Home
+  </a>
+  <a href="/#contact" onclick="document.querySelector('.menu-user').classList.toggle('active');">
+    Contact
+  </a>
+  {{#if user}}
+  <a href="/appointments">
+    Appointments
+  </a>
+  <a href="/mydoctors">
+    My Doctors
+  </a>
+  <a href="/profile">
+    My Profile
+  </a>
+  <a href="/logout">
+    Logout
+  </a>
+  {{else}}
+  <a href="/login">
+    Login
+  </a>
+  {{/if}}
+</div> --}}

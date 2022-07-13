@@ -1,0 +1,423 @@
+<section class="admin appmnt ml-250">
+  <div class="tab">
+    <button class="tb active" data-id="pending" onclick="tabview(event)">
+      <i class="fas fa-history"></i>
+      Chưa xong
+    </button>
+    <button class="tb" data-id="today" onclick="tabview(event)">
+      <i class="fas fa-calendar-day"></i>
+      Hôm nay
+    </button>
+    <button class="tb" data-id="upcoming" onclick="tabview(event)">
+      <i class="fas fa-calendar-week"></i>
+      Sắp tới
+    </button>
+    <button class="tb" data-id="consulted" onclick="tabview(event)">
+      <i class="fas fa-clipboard-check"></i>
+      Đã xong
+    </button>
+    <button class="tb" data-id="cancelled" onclick="tabview(event)">
+      <i class="fas fa-calendar-times"></i>
+      Bị hủy
+    </button>
+    <button class="tb" data-id="expired" onclick="tabview(event)">
+      <i class="fas fa-history"></i>
+      Hết hạn
+    </button>
+    <hr />
+  </div>
+  <div style="text-align: right" id="date-c">
+    <input type="date" id="date" value="{{date}}">
+  </div>
+  <!-- Pending -->
+  <div class="card-sec active" id="pending">
+    {{#if pending}}
+    {{#each pending}}
+    <div class="card" id="{{this._id}}">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>
+          Thông tin người dùng
+        </h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.user.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- Today -->
+  <div class="card-sec" id="today">
+    {{#if todays}}
+    {{#each todays}}
+    <div class="card" id="{{this._id}}">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>
+          Thông tin người dùng
+        </h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.user.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- upcoming -->
+  <div class="card-sec" id="upcoming">
+    {{#if upcoming}}
+    {{#each upcoming}}
+    <div class="card" id="{{this._id}}">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>
+          Thông tin người dùng
+        </h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.user.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- consulted -->
+  <div class="card-sec" id="consulted">
+    {{#if consulted}}
+    {{#each consulted}}
+    <div class="card" id="{{this._id}}">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>
+          Thông tin người dùng
+        </h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.user.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+        <h4>
+          Thuốc
+        </h4>
+        {{#if this.medicines}}
+        {{#each this.medicines}}
+        <p>
+          {{this}}
+        </p>
+        {{/each}}
+        {{else}}
+        <p>
+          Không có thuốc được cung cấp
+        </p>
+        {{/if}}
+        {{#if this.notes}}
+        <h4>
+          Notes
+        </h4>
+        <p>
+          {{this.notes}}
+        </p>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- cancelled -->
+  <div class="card-sec" id="cancelled">
+    {{#if cancelled}}
+    {{#each cancelled}}
+    <div class="card">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>Thông tin người dùng</h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.email.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- expired -->
+  <div class="card-sec" id="expired">
+    {{#if expired}}
+    {{#each expired}}
+    <div class="card">
+      <div class="doctor-section">
+        <div>
+          <img src="{{this.doctor.img}}" alt="{{this.doctor.name}}" />
+        </div>
+        <div>
+          <h4>
+            {{this.doctor.name}}
+          </h4>
+          <p>
+            {{this.doctor.field}}
+          </p>
+          <p>{{this.doctor.specialised}}</p>
+        </div>
+      </div>
+      <div>
+        <p>{{this.doctor.email}}</p>
+      </div>
+      <div class="c-head">
+        <h3>Thông tin người dùng</h3>
+        <p>
+          {{this.user.name}}
+        </p>
+        {{#if this.user.email}}
+        <p>
+          {{this.user.email}}
+        </p>
+        {{else}}
+        <p>
+          {{this.user.contactno}}
+        </p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>
+          {{this.date}}
+        </p>
+        <p>
+          {{this.timeslot}}
+        </p>
+        <p>
+          {{this.status}}
+        </p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>
+        Không có lịch hẹn
+      </h1>
+    </div>
+    {{/if}}
+  </div>
+</section>
+<div class="modal delete-modal">
+  <h1>
+    Bạn có muốn hủy lịch hẹn ?
+  </h1>
+  <button class="yes" onclick="cancelBooking()">
+    Có
+  </button>
+  <button class="no" onclick="document.querySelector('.delete-modal').classList.toggle('active')">
+    Không
+  </button>
+</div>
+<div class="modal delete-sucess-modal">
+  <h1>
+    Xóa thành công
+  </h1>
+  <button class="normal" onclick="document.querySelector('.delete-sucess-modal').classList.toggle('active')">
+    Đóng
+  </button>
+</div>
+<div class="modal delete-fail-modal">
+  <h1>
+    Có lỗi xảy ra
+  </h1>
+  <button class="normal" onclick="document.querySelector('.delete-fail-modal').classList.toggle('active')">
+    Đóng
+  </button>
+</div>
+<script src="/javascripts/appointment-doc.js"></script>

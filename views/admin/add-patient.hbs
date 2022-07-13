@@ -1,0 +1,110 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Thêm bệnh nhân
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    <form action="/add-patient" method="POST" onsubmit="return validate1(event)">
+      <div class="input-section">
+        <input type="text" name="name" value="{{patient.name}}" required />
+        <label for="">
+          Tên
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" placeholder="eg: example@gmail.com" name="cred" id="cred" value="{{patient.email}}" required />
+        <label for="">
+          Email
+        </label>
+      </div>
+      <div class="error user-error"></div>
+      <div class="input-section">
+        <input type="number" name="age" value="{{patient.age}}" required />
+        <label for="">
+          Tuổi
+        </label>
+      </div>
+      <div class="radio-section">
+        <div>
+          <input type="radio" name="gender" value="Nam" id="male" />
+          <label for="male">
+            <img src="/images/icons/undraw_male_avatar_323b.svg" alt="" />
+            <span>
+              Nam
+            </span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" name="gender" value="Nữ" id="female" />
+          <label for="female">
+            <img src="/images/icons/undraw_female_avatar_w3jk.svg" alt="" />
+            <span>
+              Nữ
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="input-section">
+        <input type="submit" value="Thêm" />
+      </div>
+    </form>
+  </div>
+</section>
+<div class="modal gender-modal">
+  <h1>
+    Vui lòng chọn giới tính
+  </h1>
+  <button class="normal" onclick="document.querySelector('.gender-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>
+<div class="modal valid-modal">
+  <h1>
+    Vui lòng nhập email
+  </h1>
+  <button class="normal" onclick="document.querySelector('.valid-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>
+<script>
+  var cred = document.getElementById("cred");
+  var error = document.querySelector(".user-error");
+  let checkCred = false
+  const validate1 = (event) => {
+    const male = document.getElementById("male");
+    const female = document.getElementById("female");
+    if (male.checked || female.checked) {
+      if (checkCred) {
+        return true;
+      }
+      else if (event.target.value == "") {
+        modalup("valid-modal")
+        return false;
+      }
+      else {
+        return false;
+      }
+    }
+    else {
+      modalup("gender-modal");
+      return false;
+    }
+  };
+  cred.addEventListener("keyup", (event) => {
+    var mailFormat = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})|(\+[1-9]{1}[0-9]{11})+$/;
+    if (!mailFormat.test(event.target.value)) {
+      error.innerHTML = "Please Enter Valid Email or Mobile No"
+      error.style.display = "inline";
+      cred.style.borderColor = "#ec1919";
+      checkCred = false
+    } else {
+      error.style.display = "none";
+      cred.style.borderColor = "#19b9ec";
+      checkCred = true
+    }
+  })
+</script>

@@ -1,0 +1,200 @@
+<section class="dr-page appmnt ml-250">
+  <div class="tab">
+    <button class="tb active" data-id="today" onclick="tabview(event)">
+      <i class="fas fa-calendar-day"></i>
+      Hôm nay
+    </button>
+    <button class="tb" data-id="upcoming" onclick="tabview(event)">
+      <i class="fas fa-calendar-week"></i>
+      Sắp tới
+    </button>
+    <button class="tb" data-id="consulted" onclick="tabview(event)">
+      <i class="fas fa-clipboard-check"></i>
+      Hoàn thành
+    </button>
+    <button class="tb" data-id="cancelled" onclick="tabview(event)">
+      <i class="fas fa-calendar-times"></i>
+      Bị hủy
+    </button>
+    <button class="tb" data-id="expired" onclick="tabview(event)">
+      <i class="fas fa-history"></i>
+      Hết hạn
+    </button>
+    <hr />
+  </div>
+  <!-- today -->
+  <div class="card-sec active" id="today">
+    {{#if result1}}
+    {{#each result1}}
+    <div class="card" id="{{this.item._id}}">
+      <div class="c-head">
+        <p>{{this.item.user.name}}</p>
+        {{#if this.item.user.email}}
+        <p>{{this.item.user.email}}</p>
+        {{else}}
+        <p>{{this.item.user.contactno}}</p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>{{this.item.date}}</p>
+        <p>{{this.item.timeslot}}</p>
+        <div class="btn-grp" style="margin-left: 0;">
+          <a href="/consult/{{this.item._id}}"><button class="crop">Tư vấn</button></a>
+          <button class="crop" style="margin-left: 10px;"
+            onclick="modalup('delete-modal','{{this.item._id}}')">Hủy</button>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>Không có lịch hẹn</h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- upcoming -->
+  <div class="card-sec" id="upcoming">
+    {{#if result2}}
+    {{#each result2}}
+    <div class="card" id="{{this.item._id}}">
+      <div class="c-head">
+        <p>{{this.item.user.name}}</p>
+        {{#if this.item.user.email}}
+        <p>{{this.item.user.email}}</p>
+        {{else}}
+        <p>{{this.item.user.contactno}}</p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>{{this.item.date}}</p>
+        <p>{{this.item.timeslot}}</p>
+        <div class="btn-grp" style="margin-left: 0;">
+          <button class="crop" onclick="modalup('delete-modal','{{this.item._id}}')">Hủy</button>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>Không có lịch hẹn</h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- consulted -->
+  <div class="card-sec" id="consulted">
+    {{#if result3}}
+    {{#each result3}}
+    <div class="card" id="{{this.item._id}}">
+      <div class="c-head">
+        <p>{{this.item.user.name}}</p>
+        {{#if this.item.user.email}}
+        <p>{{this.item.user.email}}</p>
+        {{else}}
+        <p>{{this.item.user.contactno}}</p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>{{this.item.date}}</p>
+        <p>{{this.item.timeslot}}</p>
+        <h4>Thuốc</h4>
+        {{#if this.item.medicines}}
+        {{#each this.item.medicines}}
+        <p>{{this.item}}</p>
+        {{/each}}
+        {{else}}
+        <p>Không có thuốc được cung cấp</p>
+        {{/if}}
+        {{#if this.item.notes}}
+        <h4>Ghi chú</h4>
+        <p>{{this.item.notes}}
+        </p>
+        {{/if}}
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>Không có lịch hẹn</h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- cancelled -->
+  <div class="card-sec" id="cancelled">
+    {{#if result4}}
+    {{#each result4}}
+    <div class="card">
+      <div class="c-head">
+        <p>{{this.item.user.name}}</p>
+        {{#if this.item.user.email}}
+        <p>{{this.item.user.email}}</p>
+        {{else}}
+        <p>{{this.item.email.contactno}}</p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>{{this.item.date}}</p>
+        <p>{{this.item.timeslot}}</p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>Không có lịch hẹn</h1>
+    </div>
+    {{/if}}
+  </div>
+  <!-- expired -->
+  <div class="card-sec" id="expired">
+    {{#if result5}}
+    {{#each result5}}
+    <div class="card">
+      <div class="c-head">
+        <p>{{this.item.user.name}}</p>
+        {{#if this.item.user.email}}
+        <p>{{this.item.user.email}}</p>
+        {{else}}
+        <p>{{this.item.user.contactno}}</p>
+        {{/if}}
+      </div>
+      <div class="c-content">
+        <p>{{this.item.date}}</p>
+        <p>{{this.item.timeslot}}</p>
+        <p>{{this.item.status}}</p>
+      </div>
+    </div>
+    {{/each}}
+    {{else}}
+    <div class="card" style="display: flex; justify-content: center; align-items: center">
+      <h1>Không có lịch hẹn</h1>
+    </div>
+    {{/if}}
+  </div>
+</section>
+<div class="modal delete-modal">
+  <h1>
+    Bạn có muốn hủy lịch ?
+  </h1>
+  <button class="yes" onclick="cancelBooking()">
+    Có
+  </button>
+  <button class="no" onclick="document.querySelector('.delete-modal').classList.toggle('active')">
+    Không
+  </button>
+</div>
+<div class="modal delete-sucess-modal">
+  <h1>
+    Xóa thành công
+  </h1>
+  <button class="normal" onclick="document.querySelector('.delete-sucess-modal').classList.toggle('active')">
+    Close
+  </button>
+</div>
+<div class="modal delete-fail-modal">
+  <h1>
+    Có lỗi xảy ra !!!
+  </h1>
+  <button class="normal" onclick="document.querySelector('.delete-fail-modal').classList.toggle('active')">
+    Đóng
+  </button>
+</div>
+<script src="/javascripts/appointment-doc.js"></script>

@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #00b8b8;
+    --secondary-color: #00c8c8;
+    --sidebar: #464646;
+    --sidebar-hover: #323232;
+    --nav-links: #d0cde1;
+    --green: #1dbe3d;
+    --red: #ec1919;
+    --login-one: #e6e6e6;
+    --login-two: #d9d9d9;
+    --body-back: #fff;
+    --light-black: #0a0a0a;
+    --green-light: #4ef700;
+    --edit: #e905b0;
+    --light: #555555;
+    --blue: #00b8b8;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-bg: #eee;
+    --border: .2rem solid rgba(0, 0, 0, .1);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}

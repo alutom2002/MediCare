@@ -1,0 +1,58 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Tư vấn cho bệnh nhân
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    <form onsubmit="submitForm('{{appointment._id}}',event)">
+      <div class="head">
+        <h4>
+          Tên: {{appointment.user.name}} <br> Tuổi: {{appointment.user.age}} <br> Giới tính: {{appointment.user.gender}}
+        </h4>
+      </div>
+      <div class="input-section">
+        <input type="text" name="input" id="medicines" style="padding-right: 75px;" />
+        <label for="medicines">
+          Thuốc
+        </label>
+        <div class="btn-grp" style="position: absolute; right: 20px; top: 20px">
+          <button class="crop" type="button" onclick="addItem()">Thêm</button>
+        </div>
+      </div>
+      <div class="disp-sec">
+        <ul>
+        </ul>
+      </div>
+      <div class="input-section">
+        <div class="head">
+          <h3>Ghi chú</h3>
+        </div>
+        <textarea name="notes"></textarea>
+      </div>
+      <div class="input-section">
+        <input type="submit" value="Cập nhập" />
+      </div>
+    </form>
+  </div>
+</section>
+<div class="modal gender-modal">
+  <h1>
+    Vui lòng chọn giới tính
+  </h1>
+  <button class="normal" onclick="document.querySelector('.gender-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>
+<div class="modal sucess-modal">
+  <h1>
+    Trị liệu thành công đã được thêm
+  </h1>
+  <button class="normal" onclick="window.location = '/'">
+    Đóng
+  </button>
+</div>
+<script src="/javascripts/consult.js"></script>

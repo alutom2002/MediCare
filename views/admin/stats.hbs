@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css"
+    integrity="sha512-C7hOmCgGzihKXzyPU/z4nv97W0d9bv4ALuuEbSf6hm93myico9qa0hv4dODThvCsqQUmKmLcJmlpRmCaApr83g=="
+    crossorigin="anonymous" />
+<section class="admin-stats ml-250">
+    <div style="padding-top: 25px;">
+        <canvas id="chart" width="500" height="200"></canvas>
+    </div>
+    <div class="head">
+        <h1 style="text-align: center;">Trạng thái</h1>
+        <div style="text-align: right;">
+            <input type="date" id="date">
+        </div>
+    </div>
+    <div class="legend">
+        <div>
+            <p><span class="legend1"></span> Lịch hẹn</p>
+        </div>
+        <div>
+            <p><span class="legend2"></span> Bệnh nhân</p>
+        </div>
+    </div>
+    <div class="d3-chart">
+        <svg width="700" height="400"></svg>
+    </div>
+    <script>
+        var total = "{{counts.total}}"
+        var approved = "{{counts.approved}}"
+        var pending = "{{counts.pending}}"
+        var consulted = "{{counts.consulted}}"
+        var deleted = "{{counts.deleted}}"
+    </script>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"
+    integrity="sha512-hZf9Qhp3rlDJBvAKvmiG+goaaKRZA6LKUO35oK6EsM0/kjPK32Yw7URqrq3Q+Nvbbt8Usss+IekL7CRn83dYmw=="
+    crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="/javascripts/charts.js"></script>

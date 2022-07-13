@@ -1,0 +1,175 @@
+<section class="dr-page ptnt ml-250">
+    <div class="tab">
+        <button id="doctor" class="active"
+            onclick="toogleTab('#doctor', '#patient', '#doctor-container', '#patient-container')">
+            <i class="fas fa-user-injured"></i>
+            Bệnh nhân
+        </button>
+        <button id="patient" onclick="toogleTab('#patient','#doctor','#patient-container','#doctor-container')">
+            <i class="fas fa-user-times"></i>
+            Bị chặn
+        </button>
+        <hr />
+    </div>
+    <div class="search" style="display: flex; justify-content:flex-end">
+            <div class="btn-grp">
+                <input type="text" name="q" class="first" id="search" value="{{query}}" placeholder="Search....">
+                <button type="submit" class="last" id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+    </div>
+    <div class="user-container">
+        <div id="doctor-container" class="container active">
+            <div class="doctors-display" style="padding: 25px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Tên
+                            </th>
+                             <th>
+                                Tuổi
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            {{!-- <th>
+                                Số điện thoại
+                            </th> --}}
+                            <th>
+                                Chức năng
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each notBlocked}}
+                        <tr id="{{this._id}}">
+                            <td>
+                                {{this.name}}
+                            </td>
+                             <td>
+                                {{this.age}}
+                            </td>
+                            <td>
+                                {{this.email}}
+                            </td>
+                            {{!-- <td>
+                                {{this.contactno}}
+                            </td> --}}
+                            <td>
+                                <a class="edit tooltip" href="/history/{{this._id}}">
+                                    <i class="fas fa-calendar"></i>
+                                    <span class="tooltip-text">Lịch sử</span>
+                                </a>
+                                <span class="delete tooltip" onclick="modalup('delete-modal','{{this._id}}')">
+                                    <i class="fas fa-user-slash"></i>
+                                    <span class="tooltip-text">Chặn</span>
+                                </span>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="patient-container" class="container">
+            <div class="doctors-display" style="padding: 25px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Tên
+                            </th>
+                            <th>
+                                Tuổi
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            {{!-- <th>
+                                Số điện thoại
+                            </th> --}}
+                            <th>
+                                Chức năng
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each blocked}}
+                        <tr id="{{this._id}}">
+                            <td>
+                                {{this.name}}
+                            </td>
+                              <td>
+                                {{this.age}}
+                            </td>
+                            <td>
+                                {{this.email}}
+                            </td>
+                            {{!-- <td>
+                                {{this.contactno}}
+                            </td> --}}
+                            <td>
+                                <a class="edit tooltip" href="/history/{{this._id}}">
+                                    <i class="fas fa-calendar"></i>
+                                    <span class="tooltip-text">Lịch sử</span>
+                                </a>
+                                <span class="yes tooltip" onclick="modalup('unblock-modal','{{this._id}}')">
+                                    <i class="fas fa-user-check"></i>
+                                    <span class="tooltip-text">Gỡ chặn</span>
+                                </span>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal delete-modal">
+    <h1>
+        Bạn có muốn chặn ?
+    </h1>
+    <button class="yes" onclick="blockUser()">
+        Có
+    </button>
+    <button class="no" onclick="document.querySelector('.delete-modal').classList.toggle('active')">
+        Không
+    </button>
+</div>
+<div class="modal unblock-modal">
+    <h1>
+        Bạn có muốn gỡ chặn ?
+    </h1>
+    <button class="yes" onclick="unblock()">
+        Có
+    </button>
+    <button class="no" onclick="document.querySelector('.unblock-modal').classList.toggle('active')">
+        Không
+    </button>
+</div>
+<div class="modal delete-sucess-modal">
+    <h1>
+        Bệnh nhân đã bị chặn
+    </h1>
+    <button class="normal" onclick="document.querySelector('.delete-sucess-modal').classList.toggle('active')">
+        Đóng
+    </button>
+</div>
+<div class="modal unblock-sucess-modal">
+    <h1>
+        Bệnh nhân đã được gỡ chặn
+    </h1>
+    <button class="normal" onclick="document.querySelector('.unblock-sucess-modal').classList.toggle('active')">
+        Đóng
+    </button>
+</div>
+<div class="modal delete-fail-modal">
+    <h1>
+        Có lỗi xảy ra !!!
+    </h1>
+    <button class="normal" onclick="document.querySelector('.delete-fail-modal').classList.toggle('active')">
+        Đóng
+    </button>
+</div>
+<script src="/javascripts/patient-search.js"></script>

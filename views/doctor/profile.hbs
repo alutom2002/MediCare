@@ -1,0 +1,82 @@
+<div class="user profile">
+    <div class="container">
+        <div class="card">
+            <div class="card-head">
+                <h1>
+                    Hồ sơ của tôi
+                </h1>
+            </div>
+            <div class="card-body">
+                <div class="img-sec">
+                    {{#isImage doctorDetails._id "doctor"}}
+                    <img src="/images/doctor/{{doctorDetails._id}}.jpg" alt="">
+                    {{else}}
+                    <img src="/images/icons/undraw_male_avatar_323b.svg">
+                    {{/isImage}}
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Tên:
+                        {{doctorDetails.name}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Tên đăng nhập:
+                        {{doctorDetails.username}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Email:
+                        {{doctorDetails.email}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Giới tính: {{doctorDetails.gender}}
+                    </p>
+                </div>
+                <div class="details-feild">
+                    <p>
+                        Chuyên ngành: {{doctorDetails.specialised}}
+                    </p>
+                </div>
+                <div class="details-field">
+                    <p>
+                        Nghiên cứu chuyên sâu: {{doctorDetails.field}}
+                    </p>
+                </div>
+                <div class="details-field">
+                    <p>
+                        Ca thời gian: {{doctorDetails.slotConfig.configSlotHours}} :
+                        {{doctorDetails.slotConfig.configSlotMinutes}}
+                    </p>
+                </div>
+                <div class="details-field">
+                    <p>
+                        Thời gian tư vấn:
+                        {{#each doctorDetails.slotConfig.timeArr}}
+                        {{this.startTime}} tới {{this.endTime}}
+                        {{/each}}
+                    </p>
+                </div>
+                <div class="details-field">
+                    <p>
+                        Thời gian trị liệu: {{doctorDetails.slotConfig.configSlotPreparation}} phút
+                    </p>
+                </div>
+                <div class="btn-grp">
+                    <a href="/profile/edit"><button class="crop">Sửa đổi chi tiết</button></a>
+                    <a href="/profile/change-password">
+                        <button class="crop" style="margin-left: 10px;">Đổi mật khẩu</button>
+                    </a>
+                </div>
+                <div class="btn-grp">
+                    <a href="/profile/username"><button class="crop">Sửa tên đăng nhập</button></a>
+                    <a href="/profile/slot-config"><button class="crop" style="margin-left: 10px;">Sửa ca thời gian</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<section class="admin-login">
+  <div class="img-section">
+    <img src="/images/icons/undraw_secure_login_pdn4.svg" alt="" />
+  </div>
+  <div class="login-container">
+    <h1>
+      Đăng nhập
+    </h1>
+    <form action="/login" method="POST" onsubmit="return emailCheck(event)">
+      <h3 class="error">
+        {{error}}
+      </h3>
+      <div class="input-section">
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="eg: +919876543210"
+          value="{{input}}"
+          required
+        />
+        <label for="email">
+          Email
+        </label>
+      </div>
+      <a href="/signup">
+        Chưa có tài khoản ?
+      </a>
+      <div class="input-section">
+        <input type="submit" value="Login" />
+      </div>
+    </form>
+  </div>
+</section>
+<div class="modal error-modal">
+  <h1>
+    Có lỗi xảy ra !!!
+  </h1>
+  <button
+    class="normal"
+    onclick="document.querySelector('.error-modal').classList.toggle('active')"
+  >
+    OK
+  </button>
+</div>
+<div class="modal valdation-modal">
+  <h1>
+    Địa chỉ Email / Số điện thoại không hợp lệ, vui lòng cung cấp địa chỉ email / số điện thoại hợp lệ
+  </h1>
+  <button
+    class="normal"
+    onclick="document.querySelector('.valdation-modal').classList.toggle('active')"
+  >
+    OK
+  </button>
+</div>

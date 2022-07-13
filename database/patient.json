@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "name": "Thành Phan",
+  "email": "phancongthanh23071999@gmail.com",
+  "contactno": null,
+  "password": "$2b$10$6aA37.EIF/TEkOd3lsuOBur/757c8Fl6p4irBIVVpY7NgGvLplDLG",
+  "gender": "Male",
+  "status": "Active",
+  "auth": "Password",
+  "age": "20"
+},{
+  "_id": {
+    "$oid": "628c9faed7b979591c03a1b3"
+  },
+  "name": "Quốc Bình",
+  "age": "21",
+  "gender": "Nam",
+  "email": "quocbinh123@gmail.com",
+  "password": "$2b$10$jzpKjSjkWgxNf4Hs0SzwtubG4D9wvshqVltDnQwcOmSwoklR0iK.u",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "628d8419cb7ad87940d81263"
+  },
+  "name": "Hoàng Duy",
+  "age": "21",
+  "gender": "Nam",
+  "email": "hoangduy123@gmail.com",
+  "password": "$2a$10$0BrQEAcLpbh.6LGz1TvUVup/.SwkHtf6gusArmWjXL8P937tR4eeW",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "name": "Hoàng Việt",
+  "age": "22",
+  "gender": "Nam",
+  "email": "hoangviet112@gmail.com",
+  "password": "$2a$10$NpftPVEe/8uuxNq4syK7pui3RI8.t0UKg4PqJjJTaLwF0Y3kQDORS",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "628e3236ea84954da8f4c0de"
+  },
+  "name": "Huy Hoàng",
+  "age": "29",
+  "gender": "Nam",
+  "email": "huyhoang124@gmail.com",
+  "password": "$2b$10$2Z13sZ5y5JsHduvUE9AUc.YPfHytf/tkSXQnOTO8l95HSR9A3HVPa",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "629dae2fb7674c06a0497456"
+  },
+  "name": "Hoàng Mỹ",
+  "age": "22",
+  "gender": "Nữ",
+  "email": "hoangmy312@gmail.com",
+  "password": "$2b$10$/ZXhhYiu/8FatfE9v0TMg.IFmyWrioc8VV70A/dJbQlV945nRzrZa",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "62a760a5695d2b5eec21ff9b"
+  },
+  "name": "Trọng Hà",
+  "email": "trongha123@gmail.com",
+  "contactno": null,
+  "password": "$2a$10$qPh.HaK.J9BWPOmaqK.axuRT8VkBAx1I1zuKBHQ3WZ4ADP4T2jpxq",
+  "gender": "Male",
+  "status": "Active",
+  "auth": "Password",
+  "age": "21"
+},{
+  "_id": {
+    "$oid": "62a7f91751d25b2c2e0c8e13"
+  },
+  "name": "Hạ Uyên",
+  "age": "22",
+  "gender": "Nữ",
+  "email": "hauyen131@gmail.com",
+  "password": "$2b$10$/ZXhhYiu/8FatfE9v0TMg.IFmyWrioc8VV70A/dJbQlV945nRzrZa",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "62a7f91a51d25b2c2e0c8e14"
+  },
+  "name": "Xuân Trang",
+  "age": "20",
+  "gender": "Nữ",
+  "email": "xuantrang1213@gmail.com",
+  "password": "$2b$10$/ZXhhYiu/8FatfE9v0TMg.IFmyWrioc8VV70A/dJbQlV945nRzrZa",
+  "status": "Active",
+  "auth": "Password"
+},{
+  "_id": {
+    "$oid": "62a7f94f51d25b2c2e0c8e15"
+  },
+  "name": "Anh Khoa",
+  "email": "anhkhoa213@gmail.com",
+  "contactno": null,
+  "password": "$2a$10$qPh.HaK.J9BWPOmaqK.axuRT8VkBAx1I1zuKBHQ3WZ4ADP4T2jpxq",
+  "gender": "Nam",
+  "status": "Active",
+  "auth": "Password",
+  "age": "21"
+},{
+  "_id": {
+    "$oid": "62a80bfcc2867a5268b28d7f"
+  },
+  "name": "Tom",
+  "email": "abcxyz@gmail.com",
+  "contactno": "",
+  "password": "$2b$10$8vEJrTa2cq7175upayWS2OmHDp7enqZ3SKCt1zdnY9D.1SLfrOmXG",
+  "gender": "Female",
+  "status": "Active",
+  "auth": "Password"
+}]

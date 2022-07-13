@@ -1,0 +1,59 @@
+<section class="admin-users ml-250">
+  <div class="user-container">
+    <div id="doctor-container" class="container active">
+      <div class="doctors-display">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Ảnh
+              </th>
+              <th>
+                Tên lễ tân
+              </th>
+              <th>
+                Tên đăng nhập
+              </th>
+              <th>
+                Email
+              </th>
+              <th>
+                Hóa đơn đã lập
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each receptionist}}
+            <tr id="{{this._id}}">
+              <td>
+                <div>
+                  {{#isImage this._id "receptionist"}}
+                  <img src="{{this.img}}" alt="" />
+                  {{else}}
+                  <img src="/images/icons/undraw_male_avatar_323b.svg">
+                  {{/isImage}}
+                </div>
+              </td>
+              <td>
+                {{this.name}}
+              </td>
+              <td>
+                {{this.username}}
+              </td>
+              <td>
+                {{this.email}}
+              </td>
+              <td>
+                <a class="edit" href="/receptionist/{{this._id}}">
+                  <i class="fa-solid fa-receipt"></i>
+                </a>
+              </td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="/javascripts/users-search.js"></script>

@@ -1,0 +1,54 @@
+<section class="dr-page ptnt ml-250">
+    <div class="user-container">
+        <div id="doctor-container" class="container active">
+            <div class="doctors-display" style="padding: 25px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                Tên khách hàng
+                            </th>
+                            <th>
+                                Tuổi
+                            </th>
+                            <th>
+                                Email
+                            </th>
+                            {{!-- <th>
+                                Số điện thoại
+                            </th> --}}
+                             <th>
+                                Hóa đơn
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each customers}}
+                        <tr id="{{this._id}}">
+                            <td>
+                                {{this.name}}
+                            </td>
+                            <td>
+                                {{this.age}}
+                            </td>
+                            <td>
+                                {{this.email}}
+                            </td>
+                            {{!-- <td>
+                                {{this.contactno}}
+                            </td> --}}
+                            <td>
+                                <a class="edit tooltip" href="/receipt/{{this._id}}">
+                                    <i class="fa-solid fa-receipt"></i>
+                                    <span class="tooltip-text">Chi tiết</span>
+                                </a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/javascripts/patient-search.js"></script>

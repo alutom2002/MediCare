@@ -1,0 +1,35 @@
+<header class="header fixed-top">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand logo" style="font-size: 1.5rem; margin-left:20px">Medi<span>Care</span></a>
+    </div>
+    {{!-- {{#if search}}
+    <div class="search">
+        <form action="/search" method="GET">
+            <div class="btn-grp">
+                <input type="search" name="q" class="first" id="search" value="{{query}}" placeholder="Search....">
+                <button type="submit" class="last" id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    {{/if}} --}}
+    <div class="menu">
+        <div class="menu_humburger"></div>
+    </div>
+</header>
+
+<section class="sidebar">
+    <div class="profile-display">
+        {{#isImage receptionistLogged._id "receptionist"}}
+        <img src="{{receptionistLogged.img}}" alt="">
+        {{else}}
+        <img src="/images/icons/undraw_male_avatar_323b.svg">
+        {{/isImage}}
+        <p>{{receptionistLogged.name}}</p>
+    </div>
+    <div class="nav-links">
+        <a href="/"><i class="fas fa-house-user"></i>&nbsp;&nbsp;Trang chủ</a>
+        <a href="/choose-patient"><i class="fa-solid fa-receipt"></i>&nbsp;&nbsp;Thêm hóa đơn</a>
+        <a href="/myprofile"><i class="fas fa-user"></i>&nbsp;&nbsp;Hồ sơ</a>
+        <a href="/logout"><i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;Đăng suất</a>
+    </div>
+</section>

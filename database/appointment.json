@@ -1,0 +1,335 @@
+[{
+  "_id": {
+    "$oid": "626aa5802a7a9e242811f97c"
+  },
+  "doctor": {
+    "$oid": "6269612f6475da55b8bd994b"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Thu Apr 28 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "status": "Pending"
+},{
+  "_id": {
+    "$oid": "628d850acb7ad87940d81264"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "628d8419cb7ad87940d81263"
+  },
+  "date": "Wed May 25 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Consulted",
+  "medicines": [
+    "Ibuprofen",
+    "Gabapentin"
+  ],
+  "notes": "Uong ngay 3 lan ",
+  "receipt": "Exported"
+},{
+  "_id": {
+    "$oid": "629485124234661ebc6cb9f0"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Wed Jun 01 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "status": "Deleted"
+},{
+  "_id": {
+    "$oid": "629d857b93466044c8041fd4"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "status": "Consulted",
+  "medicines": [
+    "Omeprazole",
+    "Amoxicillin",
+    "Ciprofloxacin",
+    "Prednisone"
+  ],
+  "notes": "Ngày uống 5 viên",
+  "receipt": "Exported"
+},{
+  "_id": {
+    "$oid": "629dacc5893d135a88d72a6f"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Tue Jun 07 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Approved"
+},{
+  "_id": {
+    "$oid": "629dae73b7674c06a0497457"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "629dae2fb7674c06a0497456"
+  },
+  "date": "Wed Jun 08 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Approved"
+},{
+  "_id": {
+    "$oid": "62a1b3b09c82ca4a80511d79"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Thu Jun 09 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "status": "Deleted"
+},{
+  "_id": {
+    "$oid": "62a760e6695d2b5eec21ff9c"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a760a5695d2b5eec21ff9b"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Consulted",
+  "receipt": "Exported",
+  "medicines": [
+    "Phennameine Hydrochloride",
+    "Nicotine",
+    "Mirtazapine",
+    "Olanzapine"
+  ],
+  "notes": "Phennameine Hydrochloride ngày uống 2 viên, Uống 1 tuần\r\nNicotine ngày uống 1 lân, uống 3 ngày\r\nmirtazapine ngày uống 2 lần, uống 1 tuần\r\nolanzapine ngày uống 2 lần, uống 1 tuần"
+},{
+  "_id": {
+    "$oid": "62a7ee0bcaddf850b8239550"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Deleted",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7ef99caddf850b8239551"
+  },
+  "doctor": {
+    "$oid": "628ce7eb83e5d5b29e5cccbb"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "8:00 AM-4:30 PM",
+  "status": "Consulted",
+  "receipt": "Exported",
+  "medicines": [
+    "Metronidazole\t",
+    "ATORVASTATIN CALCIUM",
+    "Stool Softener Laxative\t"
+  ],
+  "notes": "Metronidazole ngày uống 3 viên, Uống 3 ngày\r\nATORVASTATIN ngày uống 2 viên, uống 1 tuần\r\nLaxative ngày uống 2 viên, uống 5 ngày"
+},{
+  "_id": {
+    "$oid": "62a7f2f759387d34d866a227"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "628e314548c2fc89e8646afe"
+  },
+  "date": "Wed Jun 15 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Deleted",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7f411cefc0625d0a1c942"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Thu Jun 16 2022",
+  "timeslot": "1:00 PM-9:00 PM",
+  "status": "Approved",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7f4906abf1b2f7404cfa5"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "3:45 PM-5:45 PM",
+  "status": "Deleted",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7f7df675da52f8480a875"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a760a5695d2b5eec21ff9b"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "1:00 PM-3:00 PM",
+  "status": "Consulted",
+  "receipt": "Pending",
+  "medicines": [
+    "abc",
+    "xyz",
+    "123"
+  ],
+  "notes": "uong abc ngay 3 vien tuan 3 lan"
+},{
+  "_id": {
+    "$oid": "62a7f9b5675da52f8480a876"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a7f91751d25b2c2e0c8e13"
+  },
+  "date": "Tue Jun 14 2022",
+  "timeslot": "6:30 PM-8:30 PM",
+  "status": "Approved",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7f9ce675da52f8480a877"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a7f91a51d25b2c2e0c8e14"
+  },
+  "date": "Wed Jun 15 2022",
+  "timeslot": "1:00 PM-3:00 PM",
+  "status": "Pending",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a7f9df675da52f8480a878"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a7f94f51d25b2c2e0c8e15"
+  },
+  "date": "Wed Jun 15 2022",
+  "timeslot": "3:45 PM-5:45 PM",
+  "status": "Pending",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a80bfcc2867a5268b28d80"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62a80bfcc2867a5268b28d7f"
+  },
+  "date": "Sun Jun 19 2022",
+  "timeslot": "6:30 PM-8:30 PM",
+  "status": "Approved",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62a82667a5ed69430c6e2feb"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Fri Jun 17 2022",
+  "timeslot": "3:45 PM-5:45 PM",
+  "status": "Approved",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62bab6c5b8febf4934aaae5b"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 28 2022",
+  "timeslot": "3:45 PM-5:45 PM",
+  "status": "Deleted",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62bab8b4b8febf4934aaae5c"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Wed Jun 29 2022",
+  "timeslot": "3:45 PM-5:45 PM",
+  "status": "Approved",
+  "receipt": "Pending"
+},{
+  "_id": {
+    "$oid": "62bab8cbb8febf4934aaae5d"
+  },
+  "doctor": {
+    "$oid": "626961f56475da55b8bd994c"
+  },
+  "user": {
+    "$oid": "62569b93ff9a3708c49637fa"
+  },
+  "date": "Tue Jun 28 2022",
+  "timeslot": "6:30 PM-8:30 PM",
+  "status": "Pending",
+  "receipt": "Pending"
+}]

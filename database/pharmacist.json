@@ -1,0 +1,43 @@
+[{
+  "_id": {
+    "$oid": "6299e3c1664b5049f0bf9de2"
+  },
+  "name": "Hoàn mỹ",
+  "username": "pharma1",
+  "email": "hoanmy123@example.com",
+  "gender": "Female",
+  "password": "$2b$10$q8vX3Yq8.N.aNRhBaTwn5u3aUVUUiPD0dKzPCGlI99em0gt8eSBnW",
+  "status": "Active",
+  "slotConfig": {
+    "configSlotHours": null,
+    "configSlotMinutes": null,
+    "configSlotPreparation": null,
+    "timeArr": [
+      {
+        "startTime": "07:30",
+        "endTime": "23:31"
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "629a1d1276c98548bc0e7a86"
+  },
+  "name": "Hoàng Hải",
+  "username": "pharma2",
+  "email": "hoanghai123@example.com",
+  "gender": "Male",
+  "password": "$2b$10$a3QHBpAeA9yif8A7Yek8fuK7ao6X2gBNGV592Qo3xK50xCFyixTni",
+  "status": "Active",
+  "slotConfig": {
+    "configSlotHours": null,
+    "configSlotMinutes": null,
+    "configSlotPreparation": null,
+    "timeArr": [
+      {
+        "startTime": "07:30",
+        "endTime": "16:30"
+      }
+    ]
+  }
+}]

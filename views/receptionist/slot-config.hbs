@@ -1,0 +1,39 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Sửa ca thời gian
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    <form action="/profile/slot-config" method="POST">
+      {{#each slotConfig.timeArr}}
+      <div class="input-section">
+        <input type="time" name="startTime" value="{{this.startTime}}" id="startTime" required />
+        <label for="startTime">
+          Thời gian làm việc từ
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="time" name="endTime" value="{{this.endTime}}" id="endTime" required />
+        <label for="endTime">
+          Thời gian làm việc tới
+        </label>
+      </div>
+      {{/each}}
+      <div class="input-section">
+        <input type="submit" value="Cập nhập" />
+      </div>
+    </form>
+  </div>
+</section>
+<div class="modal gender-modal">
+  <h1>
+    Vui lòng chọn giới tính
+  </h1>
+  <button class="normal" onclick="document.querySelector('.gender-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>

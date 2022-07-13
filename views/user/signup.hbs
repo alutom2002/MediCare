@@ -1,0 +1,118 @@
+<section class="admin-login">
+  <div class="img-section">
+    <img src="/images/icons/undraw_secure_login_pdn4.svg" alt="" />
+  </div>
+  <div class="login-container">
+    <h1>
+      Tạo tài khoản
+    </h1>
+    <form action="/signup" method="POST" onsubmit="return validate(event)">
+      <h3 class="error">
+        {{error}}
+      </h3>
+      <div class="input-section">
+        <input type="text" name="name" id="name" value="{{userDetails.name}}" required />
+        <label for="name">
+          Tên
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="email" name="email" id="email" value="{{userDetails.email}}" />
+        <label for="email" id="email-lab">
+          Email (Optional)
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="text" pattern="^\+[1-9]{1}[0-9]{3,14}$" name="contactno" id="contactno"
+          placeholder="eg: +919876543210" value="{{userDetails.contactno}}" required />
+        <label for="contactno" id="cno-lab">
+          Số điện thoại (Optional)
+        </label>
+      </div>
+      <div class="input-section" id="pwd-sec">
+      </div>
+      <div class="radio-section">
+        <div>
+          <input type="radio" name="gender" value="Male" id="male" />
+          <label for="male">
+            <img src="/images/icons/undraw_male_avatar_323b.svg" alt="" />
+            <span>
+              Nam
+            </span>
+          </label>
+        </div>
+        <div>
+          <input type="radio" name="gender" value="Female" id="female" />
+          <label for="female">
+            <img src="/images/icons/undraw_female_avatar_w3jk.svg" alt="" />
+            <span>
+              Nữ
+            </span>
+          </label>
+        </div>
+      </div>
+      <a href="/login">
+        Đã có tài khoản ?
+      </a>
+      <div class="input-section">
+        <input type="submit" value="Đăng ký" />
+      </div>
+    </form>
+  </div>
+</section>
+<div class="modal gender-modal">
+  <h1>
+    Vui lòng chọn giới tính
+  </h1>
+  <button class="normal" onclick="document.querySelector('.gender-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>
+<div class="modal error-modal">
+  <h1>
+    Có lỗi xảy ra
+  </h1>
+  <button class="normal" onclick="document.querySelector('.error-modal').classList.toggle('active')">
+    OK
+  </button>
+</div>
+<script>
+  const email = document.getElementById("email")
+  const emailLab = document.getElementById("email-lab")
+  const pwd = document.getElementById("pwd-sec")
+  const cno = document.getElementById("contactno")
+  const cnoLab = document.getElementById("cno-lab")
+  email.addEventListener("keyup", (event) => {
+    if (event.target.value !== "") {
+      cno.hidden = true
+      cnoLab.hidden = true
+      cno.required = false
+      pwd.innerHTML = `
+      <input type="password" name="password" id="password" value="{{userDetails.password}}" required />
+        <label for="password">
+          Password
+        </label>
+        <div class="icon" onclick="show()">
+          <i class="far fa-eye-slash"></i>
+          <i class="far fa-eye"></i>
+        </div>
+      `
+    } else {
+      cno.hidden = false
+      cnoLab.hidden = false
+      cno.required = true
+      pwd.innerHTML = ""
+    }
+  })
+  cno.addEventListener("keyup", (event) => {
+    if (event.target.value !== "") {
+      email.hidden = true
+      emailLab.hidden = true
+      email.required = false
+    } else {
+      email.hidden = false
+      emailLab.hidden = false
+      email.required = true
+    }
+  })
+</script>

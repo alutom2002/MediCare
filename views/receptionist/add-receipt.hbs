@@ -1,0 +1,85 @@
+<section class="admin-add ml-250">
+  <div class="head">
+    <h1>
+      Xuất hóa đơn
+    </h1>
+  </div>
+  <div class="error">
+    {{error}}
+  </div>
+  <div class="container">
+    {{#each details}}
+    <form action="/add-receipt/{{this._id}}" method="POST" onsubmit="return validate(event)">
+      <div class="input-section">
+        <input type="text" disabled value="{{this.user.name}}" />
+        <label for="">
+          Tên bệnh nhân
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="text" name="user" value="{{this.user._id}}" />
+      </div>
+      <div class="input-section">
+        <input type="text" disabled value="{{this.doctor.name}}" />
+        <label for="">
+          Khám bởi
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="ObjectId" name="doctor" value="{{this.doctor._id}}" />
+      </div>
+      <div class="input-section">
+        <input type="text" disabled value="{{this.date}}" />
+        <label for="">
+          Ngày khám
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="text" name="date" value="{{this.date}}" />
+      </div>
+      <div class="input-section">
+        <input type="text" disabled value="{{this.timeslot}}" />
+        <label for="">
+          Giờ khám
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="text" name="timeslot" value="{{this.timeslot}}" />
+      </div>
+      <div class="input-section">
+        <input type="text" disabled value="{{this.notes}}" />
+        <label for="">
+          Lời dặn
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="text" name="notes" value="{{this.notes}}" />
+      </div>
+      <div class="input-section">
+        <input type="text" disabled value="{{this.medicines}}" />
+        <label for="">
+          Thuốc
+        </label>
+      </div>
+      <div class="input-section" style="display:none;">
+        <input type="text" name="medicines" value="{{this.medicines}}" />
+      </div>
+      <div class="input-section">
+        <input type="number" value="" name="total" />
+        <label for="">
+          Thành tiền
+        </label>
+      </div>
+      <div class="input-section">
+        <input type="submit" value="Thêm" />
+      </div>
+    {{/each}}
+    </form>
+    <div style="display:none;">
+      {{#each thuoc}}
+      <div class="medicine-price" price="{{this.thuoc.price}}">
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
