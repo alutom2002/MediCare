@@ -2,7 +2,6 @@ const db = require("../config/connection");
 const collection = require("../config/collection");
 const bcrypt = require("bcrypt");
 const { ObjectId } = require("mongodb");
-const { ADMIN_COLLECTION } = require("../config/collection");
 
 module.exports = {
     doLogin: (Data) => {

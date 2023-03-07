@@ -696,7 +696,7 @@ module.exports = {
                 });
         });
     },
-    /* sendInfo: (appId, status) => {
+    sendInfo: (appId, status) => {
         return new Promise(async(resolve, reject) => {
             let appointment = await db
                 .get()
@@ -765,7 +765,7 @@ module.exports = {
                 });
             }
         });
-    }, */
+    },
     checkUserStatus: (doctorId) => {
         return new Promise(async(resolve, reject) => {
             let user = await db
