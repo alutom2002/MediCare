@@ -32,8 +32,6 @@ Run app
 npm run dev
 ```
 
-
-
 This app have 3 sections. <br>
 
 ```
@@ -67,6 +65,7 @@ You may not have write permissions on your hosts file, in which case you can gra
 ```
 sudo chmod a+rw /etc/hosts
 ```
+
 ### Windows
 
 On Windows 7 and 8, the hosts file path is
@@ -86,16 +85,20 @@ admin.care.myapp.local:3001
 
 for enter each panel.
 When done the above steps download mongodb compass and setup at
+
 ```
 https://www.mongodb.com/try/download/compass
 ```
+
 Add database by collections of .json . files
 To access the admin page 
-(current database have none so much add data before login)
+`(current database have none so much add data before login)`
+
 ```
 username: admin
 password: password
 ```
+
 Other users default password is password
 
 ### Thanks for reading :heart:
