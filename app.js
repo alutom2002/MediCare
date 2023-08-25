@@ -35,21 +35,21 @@ app.engine(
         layoutsDir: __dirname + "/views/layout/",
         partialsDir: __dirname + "/views/partials/",
         helpers: {
-            isOAuth: function(auth, email, options) {
+            isOAuth: function (auth, email, options) {
                 if (auth === "Password" && email) {
                     return options.fn(this);
                 } else {
                     return options.inverse(this);
                 }
             },
-            isNotOAuth: function(auth, options) {
+            isNotOAuth: function (auth, options) {
                 if (auth === "Password") {
                     return options.fn(this);
                 } else {
                     return options.inverse(this);
                 }
             },
-            isImage: function(id, user, options) {
+            isImage: function (id, user, options) {
                 var path = "./public/images/" + user + "/" + id + ".jpg";
                 if (fs.existsSync(path)) {
                     return options.fn(this);
@@ -77,8 +77,12 @@ app.use(
 app.use(fileUpload());
 
 db.connect((error) => {
-    if (error) throw error;
-    console.log("Database Connected");
+    if (error) {
+        console.error("Error connecting: ", error);
+        throw error;
+    } else {
+        console.log("Database Connected");
+    }
 });
 
 app.use(subdomain("admin.care", adminRouter));
@@ -104,14 +108,14 @@ app.get("/500", (req, res) => {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.status(404).render("404", {
         title: "Page Not Found"
     })
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get("env") === "development" ? err : {};
